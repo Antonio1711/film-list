@@ -7,18 +7,15 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
 <title>| Streaming List |</title>
 
 <!-- Bootstrap -->
 <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-<!-- Bootstrap para testes, apagar depois que configurar thymeleaf-->
-<link href="static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
 	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
 	crossorigin="anonymous">
+
 
 </head>
 
@@ -54,47 +51,68 @@
 
 	</header>
 
-	<div class="container">
-		<br> <br>
-		<div class="col">
-			<div class="card text-center">
-				<div class="card-header  card-title">
-					<h3>Filmes</h3>
-				</div>
-				<div class="card-body">
-					<p class="card-text">Filmes</p>
-					<a href="/filmes" class="btn btn-primary">Listar Filmes</a> <a
-						href="/cadastrarFilme" class="btn btn-success">Cadastrar
-						Filmes</a>
-				</div>
-			</div>
-		</div>
-	</div>
+
 
 	<div class="container">
-		<br> <br>
-		<div class="col">
-			<div class="card text-center">
-				<div class="card-header  card-title">
-					<h3>Séries</h3>
-				</div>
-				<div class="card-body">
-					<p class="card-text">Séries</p>
-					<a href="/series" class="btn btn-primary">Listar Séries</a> <a
-						href="/cadastrarSerie" class="btn btn-success">Cadastrar
-						Séries</a>
-				</div>
+
+		<h1>Cadastrar Série</h1>
+
+		<br>
+
+
+		<form method="post">
+
+
+			<div class="form-group">
+				<label for=""><b>Nome da série:</b> </label> <input type="text"
+					class="form-control" value=""
+					placeholder="Insira o nome do série" name="nome" required>
 			</div>
-		</div>
+
+			<div class="form-group">
+
+				<label for=""><b>Descrição da série:</b></label>
+				<textarea class="form-control" name="descricao" maxlength="254"
+					rows="3" required></textarea>
+				<small class="form-text text-muted"><i>* Breve resumo da
+						série..</i></small>
+
+			</div>
+
+			<div class="row">
+				<div class="col">
+					<div class="form-group">
+						<label for=""><b>Data de lançamento da Série:</b></label><input
+							type="date" pattern="^\d+(\.|\,)\d{2}$" value=""
+							name="data_lancamento" class="form-control" required /> 
+					</div>
+
+					<div class="row">
+						<div class="col">
+							<div class="form-group">
+								<label for=""><b>Streaming disponível:</b></label><textarea
+									maxlength="254" rows="1" name="streaming"
+									class="form-control" required ></textarea>
+							</div>
+
+						</div>
+					</div>
+
+
+					<button type="submit" class="btn btn-success">Adicionar
+						Série</button>
+		</form>
+
 	</div>
+
 
 	<div style="height: 100px;"></div>
-
 
 	<div class="footer-copyright fixed-bottom bg-dark text-center py-3">
 		<span class="text-light align-middle">| Streaming List | - ©
 			2022 Copyright: Antonio Augusto</span>
 	</div>
+
 
 	<!--JavaScript bootstrap-->
 	<script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
@@ -104,6 +122,8 @@
 		crossorigin="anonymous">
 		
 	</script>
+
+
 </body>
 
 </html>
